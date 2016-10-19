@@ -33,27 +33,27 @@
                             <div class="row-fluid">
                                 <div class="span6">
                                     <div class="control-group">
-                                        <label for="shipping_firstName" class="control-label">First name</label>
+                                        <label for="shipping_firstName" class="control-label">First name *</label>
                                         <div class="controls">
                                             <input class="span12" type="text" value="{{ shippingInfo.firstName }}" name="shippingInfo[firstName]" id="shipping_firstName" />
                                             <span class="error"></span>
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <label for="shipping_lastName" class="control-label">Last name</label>
+                                        <label for="shipping_lastName" class="control-label">Last name *</label>
                                         <div class="controls">
                                             <input class="span12" type="text" value="{{ shippingInfo.lastName }}" name="shippingInfo[lastName]" id="shipping_lastName" />
                                             <span class="error"></span>
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <label for="email" class="control-label">Email</label>
+                                        <label for="email" class="control-label">Email *</label>
                                         <div class="controls">
                                             <input class="span12" type="text" value="{{ shippingInfo.email }}" name="shippingInfo[email]" id="shipping_email" />
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <label for="shipping_phone" class="control-label">Phone</label>
+                                        <label for="shipping_phone" class="control-label">Phone *</label>
                                         <div class="controls">
                                             <input class="span12" type="text" value="{{ shippingInfo.phone }}" name="shippingInfo[phone]" id="shipping_phone" />
                                             <span class="error"></span>
@@ -68,16 +68,23 @@
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <label for="shipping_address" class="control-label">Street address</label>
+                                        <label for="shipping_address" class="control-label">Street address 1 *</label>
                                         <div class="controls">
                                             <input class="span12" type="text" value="{{ shippingInfo.streetAddressLine1 }}" name="shippingInfo[streetAddressLine1]" id="shipping_address" />
+                                            <span class="error"></span>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="shipping_address" class="control-label">Street address 2</label>
+                                        <div class="controls">
+                                            <input class="span12" type="text" value="{{ shippingInfo.streetAddressLine2 }}" name="shippingInfo[streetAddressLine2]" id="shipping_address" />
                                             <span class="error"></span>
                                         </div>
                                     </div>
                                     <div class="row-fluid">
                                         <div class="span6">
                                             <div class="control-group">
-                                                <label for="shipping_city" class="control-label">Town / City</label>
+                                                <label for="shipping_city" class="control-label">Town / City *</label>
                                                 <div class="controls">
                                                     <input class="span12" type="text" value="{{ shippingInfo.city }}" name="shippingInfo[city]" id="shipping_city" />
                                                     <span class="error"></span>
@@ -86,7 +93,7 @@
                                         </div>
                                         <div class="span6">
                                             <div class="control-group">
-                                                <label for="shipping_postalCode" class="control-label">Zip / Postcode</label>
+                                                <label for="shipping_postalCode" class="control-label">Zip / Postcode *</label>
                                                 <div class="controls">
                                                     <input class="span12" type="text" value="{{ shippingInfo.postalCode }}" name="shippingInfo[postalCode]" id="shipping_postalCode" />
                                                     <span class="error"></span>
@@ -98,7 +105,7 @@
                                     <div class="row-fluid">
                                         <div class="span6">
                                             <div class="control-group">
-                                                <label for="shipping_country" class="control-label">Country</label>
+                                                <label for="shipping_country" class="control-label">Country *</label>
                                                 <div class="controls">
                                                     <select class="span12" id="shipping_country" name="shippingInfo[countryId]" data-state-selector="#shipping_state" data-current-state="{{ shippingInfo.stateId }}" >
                                                         {% for country in countries %}
@@ -111,7 +118,7 @@
                                         </div>
                                         <div class="span6">
                                             <div class="control-group">
-                                                <label for="shipping_state" class="control-label">State</label>
+                                                <label for="shipping_state" class="control-label">State *</label>
                                                 <div class="controls">
                                                     <div id="states">
                                                         <select class="span12" id="shipping_state" name="shippingInfo[stateId]" data-ajax-refresh >
